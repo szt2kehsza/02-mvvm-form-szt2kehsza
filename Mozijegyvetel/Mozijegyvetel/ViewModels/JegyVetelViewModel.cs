@@ -16,18 +16,17 @@ namespace MoziProjekt.ViewModels
         private ObservableCollection<string> _filmNev = new ObservableCollection<string>(new FilmNev().OsszesFilmNev);
 
 
-
-        [ObservableProperty]
-        private string filmKivalasztasa;
-
-        [ObservableProperty]
-        private List<string> filmNevek;
-
         [ObservableProperty]
         private ObservableCollection<JegyVetel> _jegyvetelek = new ObservableCollection<JegyVetel>();
 
         [ObservableProperty]
         private JegyVetel _selectedJegy;
+
+        private string _kivalasztottfilm;
+        public string KivalasztottFilm
+        {
+            get => _kivalasztottfilm;
+        }
 
         public JegyVetelViewModel()
         {
