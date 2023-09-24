@@ -7,6 +7,7 @@ using MoziProjekt.Models;
 using CommunityToolkit.Mvvm.ComponentModel;
 using System.ComponentModel;
 using System.Collections.ObjectModel;
+using CommunityToolkit.Mvvm.Input;
 
 namespace MoziProjekt.ViewModels
 {
@@ -24,15 +25,21 @@ namespace MoziProjekt.ViewModels
         private List<string> filmNevek;
 
         [ObservableProperty]
-        private ObservableCollection<JegyVetel> _jegyvetel = new ObservableCollection<JegyVetel>();
+        private ObservableCollection<JegyVetel> _jegyvetelek = new ObservableCollection<JegyVetel>();
 
         public JegyVetelViewModel()
         {
             jegyvetel = new JegyVetel();
             FilmKivalasztasa = string.Empty;
-            JegyVetel.Add(new JegyVetel("Elek Teszt", System.DateTime.Now, "", JegyTipusa.DIAK,));
+            JegyVetelek.Add(new JegyVetel("Elek Teszt", System.DateTime.Now, "", JegyTipusa.DIAK,));
             SelectedJegy = JegyTipusa.DIAK; 
             UpdateAr();
+        }
+        [RelayCommand]
+        public void DoSave(JegyVetel newJegyVetel)
+        {
+            JegyVetelek.Add(newJegyVetel);
+            OnPropertyChanged(nameof(JegyVetelek));
         }
 
         public JegyTipusa _selectedJegy;
