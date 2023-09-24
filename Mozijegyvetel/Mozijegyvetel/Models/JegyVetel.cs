@@ -56,7 +56,7 @@ namespace MoziProjekt.Models
 
         public override string ToString()
         {
-            return $"{TeljesNev} ({Jegy}) - ({String.Format("{0:yyyy.MM.dd.}", Filmdatuma)})  ({FilmNev})";
+            return $"{TeljesNev} ({Jegy}) - ({String.Format("{0:yyyy.MM.dd.}", Filmdatuma)})  ({FilmNev}) ({Ar}FT)";
         }
 
     }

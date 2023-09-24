@@ -46,14 +46,14 @@
         <TextBox Grid.Row="1" Grid.Column="1" Margin="2 2 2 2" Padding="0 2" Text="{Binding SelectedJegy.TeljesNev}"></TextBox>
         <DatePicker Grid.Row="2" Grid.Column="1" Margin="2 2 2 2" SelectedDate="{Binding SelectedJegy.Filmdatuma}"></DatePicker>
         <ComboBox Grid.Row="3" Grid.Column="1" Margin="2 2 2 2" 
-                  ItemsSource="{Binding FilmNevek}"
+                  ItemsSource="{Binding FilmNev}"
                   SelectedItem="{Binding KivalasztottFilm}"
                   SelectedIndex="0">
         </ComboBox>
         <StackPanel Grid.Row="4" Grid.Column="1">
-            <RadioButton GroupName="jegytipusa" Margin="2 4 2 2" IsChecked="{Binding Jegyvetel.Jegy.DIAK}">Diák</RadioButton>
-            <RadioButton GroupName="jegytipusa" Margin="2 4 2 2" IsChecked="{Binding Jegyvetel.Jegy.FELNOTT}">Felnőtt</RadioButton>
-            <RadioButton GroupName="jegytipusa" Margin="2 4 2 2" IsChecked="{Binding Jegyvetel.Jegy.NYUGDIJAS}">Nyugdíjas</RadioButton>
+            <RadioButton GroupName="jegytipusa" Margin="2 4 2 2" IsChecked="{Binding Jegyvetel.DIAK}">Diák</RadioButton>
+            <RadioButton GroupName="jegytipusa" Margin="2 4 2 2" IsChecked="{Binding Jegyvetel.FELNOTT}">Felnőtt</RadioButton>
+            <RadioButton GroupName="jegytipusa" Margin="2 4 2 2" IsChecked="{Binding Jegyvetel.NYUGDIJAS}">Nyugdíjas</RadioButton>
         </StackPanel>
         <ListBox Grid.Row="8"
                  Grid.ColumnSpan="2" 

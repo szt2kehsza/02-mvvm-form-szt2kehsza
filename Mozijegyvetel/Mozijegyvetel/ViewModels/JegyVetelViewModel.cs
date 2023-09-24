@@ -45,8 +45,6 @@ namespace MoziProjekt.ViewModels
             OnPropertyChanged(nameof(Jegyvetelek));
         }
 
-        //JegyVetelek.Add(new JegyVetel("Elek Teszt", System.DateTime.Now, "", JegyTipusa.DIAK,));
-
         [RelayCommand]
         void DoNewJegy()
         {
