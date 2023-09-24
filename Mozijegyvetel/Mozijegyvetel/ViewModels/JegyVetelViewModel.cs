@@ -26,6 +26,11 @@ namespace MoziProjekt.ViewModels
         public string KivalasztottFilm
         {
             get => _kivalasztottfilm;
+            set
+            {
+                SetProperty(ref _kivalasztottfilm, value);
+                SelectedJegy.FilmNev = _kivalasztottfilm;
+            }
         }
 
         public JegyVetelViewModel()
