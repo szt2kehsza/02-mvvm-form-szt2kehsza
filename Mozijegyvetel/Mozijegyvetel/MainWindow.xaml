@@ -38,8 +38,8 @@
                 />
             <Button Margin="0 10 2 2" HorizontalAlignment="Right" MinWidth="80" Content="Törlés"/>
         </StackPanel>
-        <TextBox Grid.Row="1" Grid.Column="1" Margin="2 2 2 2" Padding="0 2" Text="{Binding Jegyvetel.TeljesNev}"></TextBox>
-        <DatePicker Grid.Row="2" Grid.Column="1" Margin="2 2 2 2" SelectedDate="{Binding Jegyvetel.Filmdatuma}"></DatePicker>
+        <TextBox Grid.Row="1" Grid.Column="1" Margin="2 2 2 2" Padding="0 2" Text="{Binding SelectedJegy.TeljesNev}"></TextBox>
+        <DatePicker Grid.Row="2" Grid.Column="1" Margin="2 2 2 2" SelectedDate="{Binding SelectedJegy.Filmdatuma}"></DatePicker>
         <ComboBox Grid.Row="3" Grid.Column="1" Margin="2 2 2 2" 
                   ItemsSource="{Binding FilmNevek}"
                   SelectedItem="{Binding Jegyvetel.FilmNev}"
