@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,7 +21,7 @@ namespace MoziProjekt.ViewModels
         [ObservableProperty]
         private JegyVetel _selectedJegy;
 
-        private string _kivalasztottfilm = string.Empty;
+        private string _kivalasztottfilm;
         public string KivalasztottFilm
         {
             get => _kivalasztottfilm;
@@ -36,6 +35,7 @@ namespace MoziProjekt.ViewModels
         public JegyVetelViewModel()
         {
             SelectedJegy= new JegyVetel();
+            KivalasztottFilm = _filmNev.ElementAt(0);
         }
 
         [RelayCommand]
