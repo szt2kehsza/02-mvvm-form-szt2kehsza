@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 using MoziProjekt.Models;
 using CommunityToolkit.Mvvm.ComponentModel;
 using System.ComponentModel;
+using System.Collections.ObjectModel;
 
 namespace MoziProjekt.ViewModels
 {
     public partial class JegyVetelViewModel : ObservableObject
     {
-        private List<string> _filmNev = new FilmNev().OsszesFilmNev;
+        private ObservableCollection<string> _filmNev = new ObservableCollection<string>(new FilmNev().OsszesFilmNev);
 
         [ObservableProperty]
         private JegyVetel jegyvetel;
@@ -21,6 +22,9 @@ namespace MoziProjekt.ViewModels
 
         [ObservableProperty]
         private List<string> filmNevek;
+
+        [ObservableProperty]
+        private ObservableCollection<JegyVetel> _jegyvetel = new ObservableCollection<JegyVetel>();
 
         public JegyVetelViewModel()
         {
