@@ -38,7 +38,10 @@
                 Command="{Binding DoSaveCommand}"
                 CommandParameter="{Binding SelectedJegy}"
                 />
-            <Button Margin="0 10 2 2" HorizontalAlignment="Right" MinWidth="80" Content="Törlés"/>
+            <Button Margin="0 10 2 2" HorizontalAlignment="Right" MinWidth="80" Content="Törlés" 
+                Command="{Binding DoRemoveCommand}"
+                CommandParameter="{Binding SelectedJegy}"
+            />
         </StackPanel>
         <TextBox Grid.Row="1" Grid.Column="1" Margin="2 2 2 2" Padding="0 2" Text="{Binding SelectedJegy.TeljesNev}"></TextBox>
         <DatePicker Grid.Row="2" Grid.Column="1" Margin="2 2 2 2" SelectedDate="{Binding SelectedJegy.Filmdatuma}"></DatePicker>
