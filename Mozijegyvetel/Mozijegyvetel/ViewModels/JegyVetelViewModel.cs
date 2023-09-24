@@ -22,7 +22,7 @@ namespace MoziProjekt.ViewModels
         [ObservableProperty]
         private JegyVetel _selectedJegy;
 
-        private string _kivalasztottfilm;
+        private string _kivalasztottfilm = string.Empty;
         public string KivalasztottFilm
         {
             get => _kivalasztottfilm;
