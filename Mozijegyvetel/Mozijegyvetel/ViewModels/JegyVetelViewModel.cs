@@ -30,7 +30,7 @@ namespace MoziProjekt.ViewModels
         {
             jegyvetel = new JegyVetel();
             FilmKivalasztasa = string.Empty;
-            FilmNevek = _filmNev;
+            JegyVetel.Add(new JegyVetel("Elek Teszt", System.DateTime.Now, "", JegyTipusa.DIAK,));
             SelectedJegy = JegyTipusa.DIAK; 
             UpdateAr();
         }
