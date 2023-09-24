@@ -15,8 +15,7 @@ namespace MoziProjekt.ViewModels
     {
         private ObservableCollection<string> _filmNev = new ObservableCollection<string>(new FilmNev().OsszesFilmNev);
 
-        [ObservableProperty]
-        private JegyVetel jegyvetel;
+
 
         [ObservableProperty]
         private string filmKivalasztasa;
@@ -32,18 +31,18 @@ namespace MoziProjekt.ViewModels
 
         public JegyVetelViewModel()
         {
-            jegyvetel = new JegyVetel();
-            FilmKivalasztasa = string.Empty;
-            JegyVetelek.Add(new JegyVetel("Elek Teszt", System.DateTime.Now, "", JegyTipusa.DIAK,));
-            UpdateAr();
+            SelectedJegy= new JegyVetel();
         }
+
         [RelayCommand]
         public void DoSave(JegyVetel newJegyVetel)
         {
             JegyVetelek.Add(newJegyVetel);
             OnPropertyChanged(nameof(JegyVetelek));
         }
-        
+
+        //JegyVetelek.Add(new JegyVetel("Elek Teszt", System.DateTime.Now, "", JegyTipusa.DIAK,));
+
 
 
     }
