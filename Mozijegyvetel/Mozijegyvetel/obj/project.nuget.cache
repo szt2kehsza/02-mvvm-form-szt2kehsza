@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "vLmRPq7N0EnNJAUk228zG+spMQYOLb+gBbKhNCAc5UyqllL8Y+mFxi3PdFrah9vavdx31uwGBKBChhhlM6Bx+w==",
+  "success": true,
+  "projectFilePath": "D:\\school\\2.ev\\C#_gy\\02-mvvm-form-szt2kehsza\\Mozijegyvetel\\Mozijegyvetel\\MoziProjekt.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kehis\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.1\\communitytoolkit.mvvm.8.2.1.nupkg.sha512",
+    "C:\\Users\\kehis\\.nuget\\packages\\extended.wpf.toolkit\\4.5.1\\extended.wpf.toolkit.4.5.1.nupkg.sha512",
+    "C:\\Users\\kehis\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.22\\microsoft.windowsdesktop.app.ref.6.0.22.nupkg.sha512",
+    "C:\\Users\\kehis\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.22\\microsoft.netcore.app.ref.6.0.22.nupkg.sha512",
+    "C:\\Users\\kehis\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.22\\microsoft.aspnetcore.app.ref.6.0.22.nupkg.sha512",
+    "C:\\Users\\kehis\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.22\\microsoft.netcore.app.host.win-x64.6.0.22.nupkg.sha512"
+  ],
+  "logs": []
+}
