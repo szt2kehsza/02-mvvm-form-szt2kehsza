@@ -49,6 +49,13 @@ namespace MoziProjekt.ViewModels
             SelectedJegy = new JegyVetel();
         }
 
+        [RelayCommand]
+        public void DoRemove(JegyVetel jegyToDelete)
+        {
+            Jegyvetelek.Remove(jegyToDelete);
+            OnPropertyChanged(nameof(Jegyvetelek));
+        }
+
 
     }
 
