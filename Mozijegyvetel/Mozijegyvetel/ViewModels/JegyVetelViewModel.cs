@@ -27,12 +27,14 @@ namespace MoziProjekt.ViewModels
         [ObservableProperty]
         private ObservableCollection<JegyVetel> _jegyvetelek = new ObservableCollection<JegyVetel>();
 
+        [ObservableProperty]
+        private JegyVetel _selectedJegy;
+
         public JegyVetelViewModel()
         {
             jegyvetel = new JegyVetel();
             FilmKivalasztasa = string.Empty;
             JegyVetelek.Add(new JegyVetel("Elek Teszt", System.DateTime.Now, "", JegyTipusa.DIAK,));
-            SelectedJegy = JegyTipusa.DIAK; 
             UpdateAr();
         }
         [RelayCommand]
@@ -41,52 +43,8 @@ namespace MoziProjekt.ViewModels
             JegyVetelek.Add(newJegyVetel);
             OnPropertyChanged(nameof(JegyVetelek));
         }
+        
 
-        public JegyTipusa _selectedJegy;
-
-        public JegyTipusa SelectedJegy
-        {
-            get { return _selectedJegy; }
-            set
-            {
-                if (_selectedJegy != value)
-                {
-                    _selectedJegy = value;
-                    OnPropertyChanged(nameof(SelectedJegy));
-                    UpdateAr();
-                }
-            }
-        }
-
-        public int Ar
-        {
-            get { return jegyvetel.Ar; }
-            set
-            {
-                if (jegyvetel.Ar != value)
-                {
-                    jegyvetel.Ar = value;
-                    OnPropertyChanged(nameof(Ar));
-                }
-            }
-        }
-
-        public void UpdateAr()
-        {
-            switch (SelectedJegy)
-            {
-                case JegyTipusa.DIAK:
-                case JegyTipusa.NYUGDIJAS:
-                    Ar = 2200;
-                    break;
-                case JegyTipusa.FELNOTT:
-                    Ar = 2500;
-                    break;
-                default:
-                    Ar = 0;
-                    break;
-            }
-        }
 
     }
 
