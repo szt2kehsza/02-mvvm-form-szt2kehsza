@@ -47,7 +47,7 @@
         <DatePicker Grid.Row="2" Grid.Column="1" Margin="2 2 2 2" SelectedDate="{Binding SelectedJegy.Filmdatuma}"></DatePicker>
         <ComboBox Grid.Row="3" Grid.Column="1" Margin="2 2 2 2" 
                   ItemsSource="{Binding FilmNevek}"
-                  SelectedItem="{Binding Jegyvetel.FilmNev}"
+                  SelectedItem="{Binding KivalasztottFilm}"
                   SelectedIndex="0">
         </ComboBox>
         <StackPanel Grid.Row="4" Grid.Column="1">
